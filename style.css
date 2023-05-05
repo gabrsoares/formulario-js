@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #777;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem auto;
+    padding: 1rem;
+    background-color: #222;
+    width: 90vw;
+    border-radius: .5rem;
+}
+
+form h2 {
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+form p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+form input {
+    height: 2rem;
+    border-radius: .5rem;
+    border: none;
+    margin: .5rem 0;
+    padding: .25rem;
+}
+
+#checkbox {
+    display: flex;
+    align-items: center;
+}
+
+#viewPass {
+    margin-right: .5rem;
+}
+
+ul {
+    list-style: none;
+    margin-top: .5rem;
+}
+
+ul p {
+    margin-bottom: 0;
+}
+
+.radio {
+    display: flex;
+    align-items: center;
+}
+
+.radio input {
+    margin-right: .5rem;
+}
+
+#formButton {
+    width: 50%;
+    align-self: center;
+    font-weight: 700;
+    height: 3rem;
+    font-size: 1.2rem;
+    background-color: rgb(237, 240, 33);
+    cursor: pointer;
+}
+
+@media (min-width: 600px) {
+    form {
+        width: 60vw;
+    }
+}
+
+@media (min-width: 900px) {
+    form {
+        width: 480px;
+    }
+}
