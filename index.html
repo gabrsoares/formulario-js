@@ -13,25 +13,39 @@
 </head>
 <body>
     <main>
-        <form>
-            <h2>Bem-vindo(a)!</h2>
-            <p>Realize o cadastro pelo formulário abaixo</p>
-           <input type="text" id="user" name="user" placeholder="Nome de usuário" required>
-           <input type="text" id="email" name="email" placeholder="Email" required>
-           <input type="password" name="password" id="password" placeholder="Digite sua senha" required> 
-           <input type="password" name="password" id="rpassword" placeholder="Confirme sua senha" required>
-           <label id="checkbox">
-                <input type="checkbox" name="viewPass" id="viewPass">
-                Visualizar senha
-           </label>
-           <ul>
-            <p>Sexo: </p>
-            <li class="radio"><input type="radio" name="radAnswer">Masculino</li>
-            <li class="radio"><input type="radio" name="radAnswer">Feminino</li>
-            <li class="radio"><input type="radio" name="radAnswer">Outro</li>
-           </ul>
-           <input type="button" value="Confirmar" id="formButton">
-        </form>
+        <div class="container">
+            <form id="form">
+                <h2>Bem-vindo(a)!</h2>
+                <p>Realize o cadastro pelo formulário abaixo</p>
+               <input type="text" id="user" name="user" placeholder="Nome de usuário" required>
+               <input type="text" id="email" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+               <input type="password" name="password" id="password" class="passwords" placeholder="Digite sua senha" required> 
+               <input type="password" name="password" id="confPassword" class="passwords" placeholder="Confirme sua senha" required>
+               <label for="viewPass" id="checkbox">
+                    <input type="checkbox" name="viewPass" id="viewPass">
+                    Visualizar senha
+               </label>
+               <ul id="genre">
+                <p>Gênero: </p>
+                <li class="radio">
+                    <label><input type="radio" class="radioItem" name="radAnswer" value="Gênero Masculino" required>Masculino</label>
+                </li>
+                <li class="radio">
+                    <label><input type="radio" class="radioItem" name="radAnswer" value="Gênero Feminino" required>Feminino</label>
+                </li>
+                <li class="radio">
+                    <label><input type="radio" class="radioItem" name="radAnswer" value="Outro gênero" required>Outro</label>
+                </li>
+               </ul>
+               <button type="submit" id="formButton">Confirmar</button>
+            </form>
+            <div class="list">
+                <h2>Dados de cadastro</h2>
+                <p id="listData"></p>
+            </div>
+        </div>
+        
     </main> 
+    <script src="./script.js"></script>
 </body>
 </html>
